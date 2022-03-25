@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <style>
+            body {
+                background-color: #86a7d2;
+            }
+            h1 {
+                color: white;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                margin-left: 45%;
+                margin-right: 45%;
+            }
+            p {
+                background-color:blue;
+                color:orange;
+            }
+        </style>
+        <h1> This is our erev Shabbat test site </h1>
+        <p id="demo"></p>
+        <button onclick="Shabbat()">Click me!! Click me!!</button>
+        <script>
+            name = prompt("What is your name?");
+            function Shabbat() {
+                document.getElementById("demo").innerText = "Shabbat Shalom " + name + "!";
+                alert("Shabbat Shalom " + name);
+            }
+        </script>
+    </body>
+</html>
