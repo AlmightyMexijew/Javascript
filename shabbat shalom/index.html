@@ -4,27 +4,38 @@
         <style>
             body {
                 background-color: #86a7d2;
+                display:flex;
             }
             h1 {
                 color: white;
                 margin-top: 5px;
                 margin-bottom: 5px;
                 margin-left: 45%;
-                margin-right: 45%;
+                margin-right: auto;
             }
             p {
                 background-color:blue;
                 color:orange;
+                margin-left:45%;
+                margin-right: auto;
             }
         </style>
         <h1> This is our erev Shabbat test site </h1>
         <p id="demo"></p>
         <button onclick="Shabbat()">Click me!! Click me!!</button>
+        <button onclick="button1()">Click if you dare</button>
+        <button onclick="button2()">Click for your doom</button>
         <script>
             name = prompt("What is your name?");
             function Shabbat() {
                 document.getElementById("demo").innerText = "Shabbat Shalom " + name + "!";
                 alert("Shabbat Shalom " + name);
+            }
+            function button1() {
+                document.getElementById("demo").innerText = "FART!"
+            }
+            function button2() {
+                document.body.style.backgroundColor="lime";
             }
         </script>
     </body>
