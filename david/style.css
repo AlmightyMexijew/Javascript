@@ -1,0 +1,11 @@
+body {background-color: #86a7d2;
+}
+.nav-container {
+    background-color:#86a7d2;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display:flex;
+}
+button {
+    background-color: aquamarine;
+    color:blue;
+}

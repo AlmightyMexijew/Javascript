@@ -2,7 +2,7 @@
 <html>
     <!-- We're going to establish a page for David here. The goal is that we will show off a basic page with some cute JS features in it. -->
 
-    <!-- structure: I want to have a structure of buttons.  A header/navbar with buttons, a changing text in the middle. Maybe a greeting prompt for fun at the front.-->
+    <!-- structure: I want to have a structure of buttons.  A navbar with buttons, a changing text in the middle. Maybe a greeting prompt for fun at the front.-->
 
     <!-- navbar: Home/About/Services-->
     <!-- navbar/Home: This is a button that simply takes us back to index.html and clears text to original. Set variable for "original page" so we can just call that accordingly.-->
@@ -12,22 +12,22 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" src="style.css">
-        <script></script>
+        <link rel="script" src="index.js">
     </head>
     <body>
-        <!-- header for our "logo"-->
-        <header>
+        <div class="nav-container">
             <div class="logo">Gershon Tepper</div>
-            <div class="nav">
+            <div class="nav-bar">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                    <li><button onclick="home()">Home</button></li>
+                    <li><button onclick="about()">About</button></li>
+                    <li><button onclick="contact()">Contact Us</button></li>
                 </ul>
             </div>
-        </header>
+        </div>
         <!-- We are going to have a basic welcome paragraph here.  We'll call it #welcome-->
-        <p id="welcome"></p>
-        <!--We are going to have a basic welcome -->
+        <h2 id="welcome">Welcome to Gershon Tepper Web Services. We are here to build, maintain, and consult for you.</p>
+        <!--We are going to have a basic welcome. When we click on something it'll morph to the name of the button clicked. So... About, Contact-->
+        <p id="demo">Are you looking to build a webpage? Manage your Social Media? Make some money?</p>
     </body>
 </html>
