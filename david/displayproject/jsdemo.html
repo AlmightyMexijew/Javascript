@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body onload="bodyload()">
+        <script>
+            var myName;
+            myName = prompt("What is your name");
+            var myAge;
+            myAge = prompt("What is your age?");
+            var myTitle;
+            myTitle = prompt("What is your formal title?");
+            function button1() {
+                alert("Hi " + myTitle + " " + myName);
+                alert("You are " + myAge + " "+ "years old");
+            }
+            function bodyload() {
+                document.getElementById("uname").innerText = myName;
+                document.getElementById("uage").innerText = myAge;
+            }
+        </script>
+        
+        <h2>What about functionality? What about interactivity?</h2>
+        <p>With the power of JavaScript we can impact the user experience in a variety of ways. We can set buttons that <em>do things</em>. We can perform math. We can track where the user's mouse is. We can change pictures, fonts, colors. We can add and remove things. JavaScript also powers forms for things like sending a message. It even is how we asked for your name. <div id="uname">text</div> who is <div id="uage">text</div> years old. This too was JavaScript.</p>
+        <button onclick="button1()">Click me!</button>
+    </body>
+</html>
