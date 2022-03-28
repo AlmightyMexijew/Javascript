@@ -9,8 +9,9 @@
         <style>
             .nav-cont {
                 display:flex;
-                justify-content: center;
+                justify-content: space-evenly;
                 border-bottom:3px solid black;
+                padding-left:8px;
             }
             .nav {
                background-color: white;                               
@@ -18,21 +19,55 @@
         </style>
         <!--Script-->
         <script>
-
+            function oweye() {
+                alert("Ow my eye")
+            }
+            function thanks() {
+                alert("Thanks for taking your pointer out of my eye")
+            }
         </script>
 
         <!--Content Below-->
-    </div>
-    <div class="nav-cont">
-        <!--Nav Bar-->
-        <div class="nav">
-            <img src="17760304.jpeg" alt="Gershon" height="100" width="100">
-            <a href="basicpage.html">Home</a>
-            <a href="#about">About</a>
-            <a href="#examples">Examples</a>
-            <a href="#contact">Contact Us</a>
+    <section id="navbar">
+        <!--nav container where we store the stuff for navbar-->
+         <div class="nav-cont">
+        <!--Nav Bar: where we put everything in nav-bar-->
+            <div class="nav">
+                <a href="basicpage.html">Home</a>
+                <a href="#about">About</a>
+                <a href="#examples">Examples</a>
+                <a href="#contact">Contact Us</a>
+            </div>
         </div>
-
-    </div>
+    </section>
+        <!--End of nav-bar-->
+    <!--End of nav-cont-->
+    <!--New area: Hero Statement!-->
+    <section id="hero">
+    <h2>Looking to build a website?</h2>
+    <p>Gershon Tepper web services can help! We offer web design, development, social media management, and basic security posture review.</p>
+    </section>
+    <!--End of hero statement-->
+    <section id="About">
+        <h1>Who is Gershon Tepper?</h1>
+        <p>I am a web designer based in Jerusalem, Israel. I provide web services for small to medium sized businesses.</p>
+        <img src="17760304.jpeg" alt="Gershon" height="100" width="100" onmouseover="oweye()" onmouseleave="thanks()">
+        <p>This is me. International man of mystery.</p>
+    </section>
+    <!--end of about-->
+    <!-- start Examples-->
+    <section id="example">
+        <h1>What can I do for you?</h1>
+        <img src="breaking-news-absolutely.jpg" alt="nothing" height="300" width="300">
+        <p>Just kidding. Have a look at <a href="index.html">if you're interested in an example.</a></p>
+        <br>
+        <h2>Other examples can be seen at my Github</h2>
+        <ul>Including the following:
+            <li>My Russian page, which follows my journey into the Russian language on Duolingo and other spaces. Soon to have JavaScript flip-card game. <a href="https://almightymexijew.github.io/Russian/index.html"></a></li>
+            <li>General HTML/CSS/JavaScript test pages in the vicklerpractice repo</li>
+            <li>Odin Recipes page: my project for The Odin Project where I recreate 3 recipes in a basic website. <a href="https://almightymexijew.github.io/odin-recipes/index.html"></a></li>
+        </ul>
+        <p></p>
+    </section>
     </body>
 </html>
