@@ -7,6 +7,44 @@
     <body>
         <style>
             /*This is where our styling goes*/
+            body {
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-weight:bolder;
+            }
+            .navcontainer {
+                display:flex;
+                justify-content: space-between;
+                border-bottom:2px solid black;
+                padding-bottom:4px;
+            }
+            .navmain {
+                border:2px dotted black;
+                padding:2px;
+            }
+            #hero {
+                display:flex;
+                border-bottom:2px solid whitesmoke;
+                font-size:larger;
+                color:darkcyan;
+                }
+            .hero-cont {
+                padding:30px;
+            }
+            .about {
+               padding-top: 16px;
+               color:darkcyan;
+            }
+            #services {
+                padding-top: 12px;
+                color:darkgoldenrod;
+            }
+            #services li{
+                color:darkcyan;
+            }
+            #ikea {
+                background-color: blue;
+                color:gold;
+            }
         </style>
         <script>
             //This is where our scripts go. Ordered by section.
@@ -15,12 +53,23 @@
             <!--Nav container-->
             <div class="navlogo">
                 <!--logo goes here-->
+                <img src="david1.jpg" alt="logo" height="100" width="100">
             </div>
             <div class="navmain">
                 <!--Nav stuff here-->
+                <img src="hmdc.png" alt="logo" height="100" width="350">
+                <a href="#hero">Main</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#testimony">Testimonials</a>
+                <a href="#visualproof">Pics</a>
+                <a href="#why">Why HH</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact Us</a>
             </div>
             <div class="navlogo">
                 <!--logo goes here (flanking the main)-->
+                <img src="david1.jpg" alt="logo" height="100" width="100">
             </div>
             <!--End the nav container-->
         </div>
@@ -52,7 +101,7 @@
             <h2>Residential Services:</h2>
             <p>Handyman Hank has over 30 years of experience doing residential projects. No job is too difficult.</p>
             <ol>Residential Services include:
-                <li>Building furniture. IKEA, store brand, or custom!</li>
+                <li>Building furniture. <span id="ikea">IKEA</span>, store brand, or custom!</li>
                 <li>Hanging items</li>
                 <li>Painting. Including anti-mold specialized paint service!</li>
                 <li>Building non-supporting walls</li>
