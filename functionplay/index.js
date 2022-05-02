@@ -1,4 +1,8 @@
-function bob() {
-textbox1.addEventListener('keydown',logKey());
-alert('You pressed' $log.logKey)
+function add7(number){
+console.log(number + 7);
+}
+
+function multiply(number,number2){
+    const result = number * number2;
+    return result;
 }
