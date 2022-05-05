@@ -1,0 +1,43 @@
+IDEA: Rock,paper,scissors game.
+*1Initial game will be played via console on blank html page
+*2Game is going to be against the computer
+*3Function called computerPlay that will randomly return either Rock, Paper, or Scissors.  We'll use this function for the computer's play.  Check via console.log that you get a value returned.
+*4Function for playing a single round. It should have 2 parameters: playerSelection and computerSelection. It will then return a string that declares the winner of the round like so: "You Lose! Paper beats Rock!"
+*5Make function's playerSelection parameter case-insensitive so players can input rock,Rock,ROCK,etc.
+*Return results of function call, not console.log().  We're going to use what we return later so test by using console.log to see results.
+*6 write new function called game(). Call on playRound function in it to play a 5 round game that keeps score and reports winner and loser.
+a) Loops.  for(let i=0; i < 5; i++) {}
+b) use console.log() to display results and winner at end.
+c) use prompt() to get input from user.
+d)feel free to rework functions.
+e) feel free to create more helper functions.
+---------------------------------
+PROBLEM: we need to go to a console on a blank screen and initiate a game against a computer opponent. When the game initiates, it runs a randomized decision by the computer in a function called computerPlay that handles the computer's choice-making.  The user will also be prompted for their input based on the 3 choices. It will be case insensitive (despite us being better off designing around a set of easy input keys like 0,1,2). There will be a comparison of strength of choice. Each round it will console.log() the result based on that evaluation. The game will then have an added feature for best of 5 called game() which will loop the process for 5 consecutive rounds. It will console.log answers as it goes and then declare a sum total winner.
+
+PIECES:
+1-- Blank HTML page.
+2-- initiation of game.
+3-- function computerPlay which handles the decision of the computer. It will be randomized.
+4-- offer user 3 options to choose from
+5-- user input, which is passed to function for single round (playerSelection and computerSelection parameters).
+6-- user input will be case insensitive, so whatever they answer will evaluate to the same as the option.
+7-- something that will make a comparison between playerSelection and computerSelection
+8-- console function that will output our choices
+9-- console function that will output the winner.
+10-- game() function that allows for playing 5 games in a row via for loop.
+11-- tweak code to run 5-9  * 5.
+12-- console.log that declares game over.
+
+-----
+Smallest piece? Selection of a position.
+Next smallest piece? comparison of pieces.
+3rd smallest piece? declaring a result
+4th smallest piece? tracking wins
+5th smallest piece? the loop.
+-------
+computerSelection
+/* this will make a selection for the computer*/
+/* it should be randomized.*/
+To randomize it, we will give it an array with rock,paper,scissors. We'll ask it to math.random * answer.length. Since we need to make it integers, we'll use math.floor on the result.
+something like var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+console.log(randomAnswer);

@@ -1,0 +1,72 @@
+Problem:
+Write a program that takes a user's input and prints the numbers from one to the number entered. For multiple of 3 print fizz instead of the number. for multiples of 5 print buzz. For numbers which are multiples of both 3 and 5 print FizzBuzz.
+
+My Rewrite: Program that takes user's input. It prints numbers from 1 to input. If the number is a multiple of 3 print fizz. If it's a multiple of 5 print buzz. If it's both, print fizzbuzz.
+
+Their Rewrite: Write a program that allows the user to enter a number, print each number between one and the number the user entered, but for numbers that divide by 3 without a remainder print Fizz instead. For numbers that divide by 5 without a remainder print Buzz. Finally for numbers that divide by both 3 and 5 without a remainder print FizzBuzz.
+
+QUESTIONS:
+Does my program have an interface?  No. It's going to be a console program. The only interaction will be user's pick of the number.
+
+What inputs will our program have? A text/number input via console.
+Will the user enter data or will you get the input from somewhere else? User input.
+How? We'll use a prompt (per TOP).
+
+What's the desired output? A list of numbers from 1 to our user's number. Assuming there is a number divisible by 3 or 5, we will adjust output to print.
+
+Given our inputs what steps are necessary?
+Prompt user for input of number
+Make an array of numbers between 1 and input number.
+Print numbers in order of list.
+Check each number as we go for divisibility by 3 or 5.
+If divisible by 3, print fizz. If divisible by 5, buzz.
+ --If yes, check if divisible by both. If yes, print fizzbuzz.
+
+ Their pseudocode:
+ When a user inputs a number
+ Loop from 1 to the entered number
+ if the current number is divisible by 3 then print "Fizz"
+ if the current number is divisible by 5 then print "Buzz"
+ if the current number is divisible by both then print "FizzBuzz"
+ Otherwise, print the current number.
+
+ Implement/Divide and Conquer
+ 1) When a user inputs a number // prompt user for a number.
+(var/let/const) answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+This creates our popup prompt asking for a number. It stores the answer into the variable answer. TOP says use let but we can use any of the 3 if we wanted.  The parseInt wrapped around the prompt seeks out a number from the input. ** This looks dafka for an integer
+
+2) Loop from 1 to the entered number.
+for (let i = 1; i <= answer; i++) {
+console.log(i);
+}
+My interpretation: for loop that states that i is assigned value of 1. next step is to check if it's less than or equal to answer. It then increments by 1 per the ++. Every time it runs, it prints in console.log(i) for the current value.
+
+Their answer: declare variable i and assign it 1 as initial value for our loop. We normally would use 0 but our program sets out from 1 because of conditions. The next clause is i <= answer. This is our condition. We want to loop until it's greater than. The third clause is i++ which increments by 1 each run cycle. So if the input is 10, it loops 1 - 10 on console.
+
+3)Is the current number divisible by 3? If so print Fizz.
+My interpretation: if statement that takes i and compares it. if yes, print fizz, if not print number.
+Them: if (i % 3 === 0) {
+console.log("Fizz");
+} else {
+console.log(i);
+}
+}
+this will check with an if statement.. i % 3 divides i by 3. if there is no remainder it will have 0..if there is remainder this division returns the remainder. It then checks if that return value is strictly equal to 0. if it is, console.log("Fizz");. If not, the else command console.log(i);.
+
+On a cold run to 10, we have fizz for multiples of 3.  Now to do buzz.
+We just insert else if and do i % 5 === 0  ...and if so, buzz...
+
+But we still have one more problem..What about fizzbuzz for when both apply?
+If I had to guess, our module would set a boolean into the code..something like:
+if i % 3 fizz = true
+if i % 5 buzz = true
+if fizz === true and buzz === true, console.log("fizzbuzz")
+
+TOP's answer:
+if (i % 3 === 0 && i % 5 === 0)
+and elseif the other checks...and then else console.log(i) if all fail.
+
+By checking if it's both early, we don't worry about it moving on as if true because of a single condition (i.e. if it was checking for 3 it'd be maybe true but false for 5...and that'd be a problem).
+
+
+

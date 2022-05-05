@@ -1,0 +1,11 @@
+DEVELOPMENT NOTES:
+After the initial find of a way that takes things randomly from an array, it successfully makes a choice and logs back an answer ("rock").
+
+NEW PROBLEM:
+the variable only takes one answer. We need to figure out how to move around between the choices. A single random choice will not cut it.
+
+Solution?: After testing a function to run the following:
+var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+console.log(randomAnswer);
+
+we could change assignment as necessary, leading to randomization.  Every time we ran function(), it would return us a different answer.
