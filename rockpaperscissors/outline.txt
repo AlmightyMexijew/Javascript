@@ -41,3 +41,17 @@ computerSelection
 To randomize it, we will give it an array with rock,paper,scissors. We'll ask it to math.random * answer.length. Since we need to make it integers, we'll use math.floor on the result.
 something like var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
 console.log(randomAnswer);
+-------
+PIECE STATUS:
+1 blank HTML: complete.
+2-- initiation of game.
+3-- function computerPlay which handles the decision of the computer. It will be randomized.
+4-- offer user 3 options to choose from
+5-- user input, which is passed to function for single round (playerSelection and computerSelection parameters).
+6-- user input will be case insensitive, so whatever they answer will evaluate to the same as the option.
+7-- something that will make a comparison between playerSelection and computerSelection
+8-- console function that will output our choices
+9-- console function that will output the winner.
+10-- game() function that allows for playing 5 games in a row via for loop.
+11-- tweak code to run 5-9  * 5.
+12-- console.log that declares game over.
